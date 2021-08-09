@@ -3915,21 +3915,39 @@ public class VoiceActivity extends MyBaseMVPActivity implements VoiceView,
                         BaseBean baseBean = JSON.parseObject(responseString, BaseBean.class);
                         showToast(baseBean.getMsg());
                         if (baseBean.getCode() == 0) {
-                            try {
-                                //设置成功后发送
-                                ArrayList<Integer> list = new ArrayList<>();
-                                for (int index=0;index <oldResult.length(); index++) {
-                                    list.add(Integer.parseInt(oldResult.substring(index,index+1)));
+                            //设置成功后通过接口发送
+                            voicePresenter.getRandomNumber(userToken, new MyObserver(getSelfActivity()) {
+                                @Override
+                                public void success(String responseString) {
+                                    RandomNumberBean baseBean = JSON.parseObject(responseString, RandomNumberBean.class);
+                                    try {
+                                        ArrayList<Integer> list = baseBean.getData();
+                                        EmojiMessageBean.DataBean emojiData =
+                                                new EmojiMessageBean.DataBean(goldNum, charmGrade,
+                                                        dataBean.getUnicode(), header, userName, userToken, numberShow, dataBean.getName(), list);
+                                        EmojiMessageBean emojiMessageBean = new EmojiMessageBean(108, emojiData);
+                                        String chatString = new Gson().toJson(emojiMessageBean);
+                                        setSendMessage(chatString);
+                                    } catch (Exception ex) {
+                                        ex.printStackTrace();
+                                    }
                                 }
-                                EmojiMessageBean.DataBean emojiData =
-                                        new EmojiMessageBean.DataBean(goldNum, charmGrade,
-                                                dataBean.getUnicode(), header, userName, userToken, numberShow, dataBean.getName(), list);
-                                EmojiMessageBean emojiMessageBean = new EmojiMessageBean(108, emojiData);
-                                String chatString = new Gson().toJson(emojiMessageBean);
-                                setSendMessage(chatString);
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                            }
+                            });
+//                            try {
+//                                //设置成功后发送
+//                                ArrayList<Integer> list = new ArrayList<>();
+//                                for (int index=0;index <oldResult.length(); index++) {
+//                                    list.add(Integer.parseInt(oldResult.substring(index,index+1)));
+//                                }
+//                                EmojiMessageBean.DataBean emojiData =
+//                                        new EmojiMessageBean.DataBean(goldNum, charmGrade,
+//                                                dataBean.getUnicode(), header, userName, userToken, numberShow, dataBean.getName(), list);
+//                                EmojiMessageBean emojiMessageBean = new EmojiMessageBean(108, emojiData);
+//                                String chatString = new Gson().toJson(emojiMessageBean);
+//                                setSendMessage(chatString);
+//                            } catch (Exception ex) {
+//                                ex.printStackTrace();
+//                            }
                         }
                     }
                 });
