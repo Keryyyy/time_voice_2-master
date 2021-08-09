@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="javalib" target="1.7" />
+      <module name="time-voice.app" target="11" />
+      <module name="time-voice.tuikit" target="11" />
+      <module name="time-voice.xldUtils" target="11" />
+      <module name="time_voice-javalib" target="1.7" />
+      <module name="time_voice.app" target="1.8" />
+      <module name="time_voice.tuikit" target="1.8" />
+      <module name="time_voice.xldUtils" target="1.8" />
+      <module name="time_voice_2-master.app" target="1.8" />
+      <module name="time_voice_2-master.tuikit" target="1.8" />
+      <module name="time_voice_2-master.xldUtils" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

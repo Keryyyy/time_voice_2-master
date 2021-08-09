@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_packet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/ll_packet"
+        android:layout_width="379dp"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_number_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vciv_code"
+            android:layout_alignEnd="@+id/vciv_code"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_number_ok" />
+
+        <ImageView
+            android:id="@+id/iv_number_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vciv_code"
+            android:layout_alignStart="@+id/vciv_code"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_number_cancel" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="猜小黄人数"
+            android:textColor="#E4007F"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.siyecaoi.yy.view.inputview.VerificationCodeInputView
+            android:id="@+id/vciv_code"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:vciv_et_text_color="#1500E4"
+            app:vciv_et_underline_show="false"
+            app:vciv_et_background="#E5E5E5"
+            app:vciv_et_cursor_color="#1500E4"
+            app:vciv_et_foucs_background="#E5E5E5"
+            app:vciv_et_height="80dp"
+            app:vciv_et_inputType="number"
+            app:vciv_et_number="3"
+            app:vciv_et_text_size="55sp"
+            app:vciv_et_underline_default_color="@android:color/holo_green_dark"
+            app:vciv_et_underline_focus_color="@android:color/holo_blue_bright"
+            app:vciv_et_underline_height="2dp"
+            app:vciv_et_width="58dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

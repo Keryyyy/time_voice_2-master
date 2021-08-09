@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <RelativeLayout
+        fresco:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/gaosi_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_380">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_380"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_gapsi"
+            android:foreground="@color/black3"/>
+
+        <LinearLayout
+            android:id="@+id/ll_back_personshow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_26" />
+            <ImageView
+                android:id="@+id/iv_back_personhome"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/icon_back" />
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42">
+
+
+
+                <TextView
+                    android:id="@+id/tv_data_personhome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/title_data"
+                    android:textSize="@dimen/sp_12"
+                    android:drawableStart="@drawable/me_edit"
+                    android:drawablePadding="@dimen/dp_2"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_data_personhome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/more"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="290dp"
+        android:background="@drawable/gaoshi_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_room_personhome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_room_personhome"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_10"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_head"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/white"
+                    fresco:roundingBorderWidth="@dimen/dp_1" />
+
+                <TextView
+                    android:id="@+id/tv_roomname_personhome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:text="进入聊天室 >"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:paddingLeft="@dimen/dp_2"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_photo"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/title_bar_line"
+                        android:gravity="center"
+                        android:text="相册"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_nomal_gift"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/tv_nomal_gift"
+                        android:textColor="@color/white8"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/tv_packet_gift"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="道具"
+                        android:textColor="@color/white8"
+                        android:textSize="@dimen/sp_12" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_8"
+                    android:minHeight="@dimen/dp_180">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mRecyclerView_gift_personhome"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mRecyclerView_prop_personhome"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/mRecyclerView_personhome"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="@dimen/dp_10"-->
+<!--                        android:paddingEnd="@dimen/dp_10" />-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mRecyclerView_personhome">
+                        <TextView
+                            android:id="@+id/tv_empty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_img_personhome"
+                            android:textColor="@color/white6"
+                            android:visibility="invisible"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            fresco:layout_constraintStart_toStartOf="parent"
+                            fresco:layout_constraintEnd_toEndOf="parent"
+                            fresco:layout_constraintTop_toTopOf="parent"
+                            fresco:layout_constraintBottom_toBottomOf="parent"/>
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_1"
+                            android:layout_width="0dp"
+                            android:layout_height="168dp"
+                            android:visibility="invisible"
+                            android:layout_marginTop="@dimen/dp_12"
+                            fresco:layout_constraintTop_toTopOf="parent"
+                            fresco:layout_constraintStart_toStartOf="@id/iv_4"
+                            fresco:layout_constraintEnd_toEndOf="@id/iv_5"
+                            fresco:placeholderImage="@color/bg_10half_green"
+                            fresco:roundedCornerRadius="@dimen/dp_6"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_2"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_80"
+                            fresco:layout_constraintTop_toTopOf="@id/iv_1"
+                            fresco:layout_constraintStart_toStartOf="@id/iv_6"
+                            fresco:layout_constraintEnd_toEndOf="@id/iv_6"
+                            fresco:placeholderImage="@color/bg_10half_green"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:visibility="invisible"
+                            fresco:roundedCornerRadius="@dimen/dp_6"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_3"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_80"
+                            fresco:layout_constraintBottom_toBottomOf="@id/iv_1"
+                            fresco:layout_constraintStart_toStartOf="@id/iv_6"
+                            fresco:layout_constraintEnd_toEndOf="@id/iv_6"
+                            fresco:placeholderImage="@color/bg_10half_green"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:visibility="invisible"
+                            fresco:roundedCornerRadius="@dimen/dp_6"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_4"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_80"
+                            android:layout_marginTop="@dimen/dp_12"
+                            fresco:layout_constraintTop_toBottomOf="@id/iv_1"
+                            fresco:layout_constraintStart_toStartOf="parent"
+                            android:visibility="invisible"
+                            fresco:layout_constraintEnd_toStartOf="@id/iv_5"
+                            fresco:placeholderImage="@color/bg_10half_green"
+                            android:layout_marginStart="@dimen/dp_10"
+                            fresco:roundedCornerRadius="@dimen/dp_6"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_5"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_80"
+                            android:visibility="invisible"
+                            fresco:layout_constraintTop_toTopOf="@id/iv_4"
+                            fresco:layout_constraintStart_toEndOf="@id/iv_4"
+                            fresco:layout_constraintEnd_toStartOf="@id/iv_6"
+                            fresco:placeholderImage="@color/bg_10half_green"
+                            android:layout_marginStart="@dimen/dp_10"
+                            fresco:roundedCornerRadius="@dimen/dp_6"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_6"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_80"
+                            android:visibility="invisible"
+                            fresco:layout_constraintTop_toTopOf="@id/iv_4"
+                            fresco:layout_constraintStart_toEndOf="@id/iv_5"
+                            fresco:layout_constraintEnd_toEndOf="parent"
+                            fresco:placeholderImage="@color/bg_10half_green"
+                            android:layout_marginEnd="@dimen/dp_12"
+                            fresco:roundedCornerRadius="@dimen/dp_6"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:id="@+id/ll_add"
+                                android:visibility="invisible"
+                                fresco:layout_constraintStart_toStartOf="@id/iv_1"
+                                fresco:layout_constraintEnd_toEndOf="@id/iv_1"
+                                fresco:layout_constraintBottom_toBottomOf="@id/iv_1"
+                                fresco:layout_constraintTop_toTopOf="@id/iv_1"
+                                android:gravity="center">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/iv_add"
+                                    android:src="@drawable/add_img_green"/>
+                                <TextView
+                                    android:id="@+id/tv_add"
+                                    android:layout_marginTop="@dimen/dp_12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="上传图片"
+                                    android:textSize="@dimen/sp_10"
+                                    android:textColor="@color/tvCommon"/>
+
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_personhome"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:paddingVertical="@dimen/dp_6"
+            android:paddingHorizontal="@dimen/dp_60"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_addattention_personhome"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_green_20dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tv_isattention_personhome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:drawableStart="@drawable/white_add"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="@string/tv_attention_personhome"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_chat_personhome"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:background="@drawable/bg_half_green_20dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/tv_chat_personhome"
+                    android:textColor="@color/white8"
+                    android:textSize="@dimen/sp_14"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_show_personhome"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        fresco:layout_constraintTop_toTopOf="parent"
+        fresco:layout_constraintStart_toStartOf="parent"
+        fresco:layout_constraintEnd_toEndOf="parent"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/default_head"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true"
+        android:layout_marginTop="@dimen/dp_90"/>
+    <TextView
+        android:id="@+id/tv_name_personhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="--"
+        tools:text="测试人"
+        fresco:layout_constraintTop_toBottomOf="@id/iv_show_personhome"
+        fresco:layout_constraintStart_toStartOf="parent"
+        fresco:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+    <ImageView
+        android:id="@+id/iv_sex_personhome"
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        fresco:layout_constraintTop_toTopOf="@id/tv_name_personhome"
+        fresco:layout_constraintBottom_toBottomOf="@id/tv_name_personhome"
+        fresco:layout_constraintStart_toEndOf="@id/tv_name_personhome"
+        android:layout_marginStart="@dimen/dp_8"
+        android:padding="@dimen/dp_1"
+        android:src="@drawable/selector_man" />
+
+    <TextView
+        android:id="@+id/tv_signer_personhome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:hint="@string/hint_signer_personhome"
+        android:textColor="@color/white8"
+        android:textColorHint="@color/white8"
+        fresco:layout_constraintTop_toBottomOf="@id/tv_name_personhome"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp_4"
+        fresco:layout_constraintTop_toBottomOf="@id/tv_signer_personhome"
+        fresco:layout_constraintStart_toStartOf="parent"
+        fresco:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/liang_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dp_2"
+            android:src="@drawable/liang_id"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID:"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_roomid_personhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2233445"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+        <ImageView
+            android:id="@+id/iv_grade_personhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_1"
+            android:paddingLeft="@dimen/dp_8"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/iv_charm_personhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_4"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_1"
+            android:paddingLeft="@dimen/dp_8"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:orientation="horizontal"
+        fresco:layout_constraintTop_toBottomOf="@id/ll_id"
+        fresco:layout_constraintStart_toStartOf="parent"
+        fresco:layout_constraintEnd_toEndOf="parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tv_name_personhome">
+
+        <LinearLayout
+            android:id="@+id/rl_fans_personhome"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_clicker"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tv_fans_personhome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="粉丝"
+                android:layout_marginStart="@dimen/dp_4"
+                android:textColor="@color/white8"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_attention_personhome"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:background="@drawable/bg_clicker"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tv_attention_personhome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                android:layout_marginStart="@dimen/dp_4"
+                android:textColor="@color/white8"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_find_personhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        fresco:layout_constraintEnd_toEndOf="parent"
+        fresco:layout_constraintTop_toTopOf="@id/iv_show_personhome"
+        fresco:layout_constraintBottom_toBottomOf="@id/iv_show_personhome"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/tv_find_personhome"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_28"
+            android:background="@drawable/find_bg"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="right|center_vertical"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_10"
+            android:text="在房间"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            android:drawableStart="@mipmap/at_home"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_room_personhome"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_28"
+            android:background="@drawable/fangjian_bg"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="right|center_vertical"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_10"
+            android:visibility="gone"
+            android:text="TA的房间"
+            android:layout_marginStart="8dp"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        fresco:layout_constraintTop_toTopOf="parent"
+        fresco:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/rl_signers_personhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_signers_personhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iv_play_voice"
+            android:padding="@dimen/dp_5"/>
+
+        <TextView
+            android:id="@+id/tv_number_personhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#444444"
+            android:visibility="gone"
+            android:textSize="@dimen/sp_11" />
+        <TextView
+            android:id="@+id/tv_changesingers_personhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:textColor="#444444"
+            android:text="@string/tv_change_personhome"
+            android:textSize="@dimen/sp_11" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_mine"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        fresco:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_50">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_4"
+            android:layout_marginStart="@dimen/dp_12"
+            android:background="@drawable/bg_white_10trans_10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_gold"
+                android:text="0"
+                android:drawablePadding="6dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11"
+                android:drawableStart="@drawable/yhc_small"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_money"
+                android:text="0"
+                android:drawablePadding="6dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11"
+                android:layout_marginStart="@dimen/dp_8"
+                android:drawableStart="@drawable/gold"/>
+        </LinearLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_menu"
+            android:padding="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:src="@drawable/ic_menu"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

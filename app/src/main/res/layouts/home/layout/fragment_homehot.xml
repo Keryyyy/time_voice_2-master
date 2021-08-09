@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/dan_mu_rl"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:visibility="gone"
+                android:background="@drawable/barrage_bg"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginVertical="@dimen/dp_8">
+
+                <com.orient.tea.barragephoto.ui.BarrageView
+                    android:id="@+id/barrage"
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp"
+                    android:layout_centerVertical="true"
+                 />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_13"
+                android:text="热门推荐"
+                android:visibility="gone"
+                android:drawableStart="@drawable/hot_fire"
+                android:drawablePadding="@dimen/dp_4"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_10">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecyclerView_header_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_13"
+                android:text="火热房间"
+                android:drawablePadding="@dimen/dp_4"
+                android:drawableStart="@drawable/hot_fire"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecyclerView_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dp_7">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+</LinearLayout>

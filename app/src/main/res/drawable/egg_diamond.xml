@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_egg_normal" android:width="101dp" android:height="@dimen/dp_32"/>
+    <item android:drawable="@drawable/diamond_egg" android:width="@dimen/dp_42" android:height="@dimen/dp_15"
+        android:gravity="center"
+        android:top="@dimen/dp_6"/>
+</layer-list>

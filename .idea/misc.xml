@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/drawable/chart_left_bg.xml" value="0.3748717948717949" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/drawable/selector_mic.xml" value="0.3748717948717949" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/drawable/selector_receiver.xml" value="0.3748717948717949" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layout/activity_room_list.xml" value="0.22" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layout/activity_roomrevenue.xml" value="0.28020833333333334" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/find/layout/item_list_radioda.xml" value="0.3645833333333333" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/home/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/home/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/home/layout/fragment_homehot.xml" value="0.3645833333333333" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/login/layout/activity_phone_login.xml" value="0.358695652173913" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/mine/layout/activity_payone.xml" value="0.36367753623188404" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/mine/layout/layout_paypass.xml" value="0.358695652173913" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/other/layout/activity_lancher.xml" value="0.1" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/other/layout/dialog_bottom_show.xml" value="0.19375" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/other/layout/dialog_number.xml" value="0.3645833333333333" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/other/layout/dialog_packet.xml" value="0.3645833333333333" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/other/layout/dialog_roompassdialog.xml" value="0.36367753623188404" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/other/layout/item_chat_voice.xml" value="0.5" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/other/layout/item_place_voice.xml" value="0.25" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/other/layout/layout_recycler_top.xml" value="0.35190217391304346" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/room/layout/activity_place.xml" value="0.35190217391304346" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/room/layout/activity_voice.xml" value="0.35190217391304346" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/room/layout/voice_bottom.xml" value="0.33" />
+        <entry key="..\:/work/time_voice_2-master/app/src/main/res/layouts/room/layout/voice_top.xml" value="0.2" />
+        <entry key="..\:/work/time_voice_2-master/xldUtils/src/main/res/layout/fragment_vertical_linear_recyclerview.xml" value="0.36367753623188404" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+</project>
