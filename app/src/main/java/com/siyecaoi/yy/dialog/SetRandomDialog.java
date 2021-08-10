@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.blankj.utilcode.util.KeyboardUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.siyecaoi.yy.R;
 import com.siyecaoi.yy.view.inputview.VerificationCodeInputView;
 
@@ -84,14 +85,18 @@ public class SetRandomDialog extends Dialog {
             @Override
             public void onClick(View v) {
                 StringBuilder sb = new StringBuilder();
-                for (int i = 0; i<inputNumber.length; i++){
-                    sb.append(inputNumber[i]);
-                    if (i < 2){
-                        sb.append(",");
+                if (inputNumber!= null){
+                    for (int i = 0; i<inputNumber.length; i++){
+                        sb.append(inputNumber[i]);
+                        if (i < 2){
+                            sb.append(",");
+                        }
                     }
+                    mCallBack.setNumber(mOldResult,sb.toString());
+                    dismiss();
+                }else {
+                    ToastUtils.showShort("请输入完整的数字");
                 }
-                mCallBack.setNumber(mOldResult,sb.toString());
-                dismiss();
             }
         });
 

@@ -200,7 +200,7 @@ public class PlaceRecyclerAdapter extends BaseQuickAdapter<VoiceMicBean.DataBean
                 int emojiCode = item.getUserModel().getShowImg();
                 AnimationDrawable animationDrawable;
                 if (emojiCode >= 128604) { //svga表情
-                    if (emojiCode == 128629){ //随机数
+                    if (emojiCode == 128629 || emojiCode == 128630){ //随机数
                         Animation rotateAnimation= AnimationUtils.loadAnimation(mContext,R.anim.view_rotate);
                         rotateAnimation.setAnimationListener(new Animation.AnimationListener() {
                             @Override
