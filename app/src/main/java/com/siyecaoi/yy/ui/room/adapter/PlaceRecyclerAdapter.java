@@ -51,6 +51,7 @@ public class PlaceRecyclerAdapter extends BaseQuickAdapter<VoiceMicBean.DataBean
     @SuppressLint({"DefaultLocale", "SetTextI18n"})
     @Override
     protected void convert(BaseViewHolder helper, VoiceMicBean.DataBean item) {
+//        helper.setIsRecyclable(false);
         SimpleDraweeView iv_headershow_place = helper.getView(R.id.iv_headershow_place);//头像
         SVGAImageView iv_headwear_place = helper.getView(R.id.iv_headwear_place);//头饰
         ImageView iv_back_place = helper.getView(R.id.iv_back_place);
@@ -64,6 +65,12 @@ public class PlaceRecyclerAdapter extends BaseQuickAdapter<VoiceMicBean.DataBean
         ImageView ivNumber1 = helper.getView(R.id.iv_number_1);
         ImageView ivNumber2 = helper.getView(R.id.iv_number_2);
         ImageView ivNumber3 = helper.getView(R.id.iv_number_3);
+
+        ivNumber1.clearAnimation();
+        ivNumber2.clearAnimation();
+        ivNumber3.clearAnimation();
+        llRotate.setVisibility(View.GONE);
+
 
         tv_number_place.setText(helper.getAdapterPosition() + 1+"");
         Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/impact.ttf");
@@ -197,10 +204,14 @@ public class PlaceRecyclerAdapter extends BaseQuickAdapter<VoiceMicBean.DataBean
 //            tv_points_place.setTypeface(typeface);
 
             if (item.getUserModel().getShowImg() != 0) { //展示表情
+
+
                 int emojiCode = item.getUserModel().getShowImg();
                 AnimationDrawable animationDrawable;
                 if (emojiCode >= 128604) { //svga表情
+
                     if (emojiCode == 128629 || emojiCode == 128630){ //随机数
+
                         Animation rotateAnimation= AnimationUtils.loadAnimation(mContext,R.anim.view_rotate);
                         rotateAnimation.setAnimationListener(new Animation.AnimationListener() {
                             @Override
@@ -224,6 +235,7 @@ public class PlaceRecyclerAdapter extends BaseQuickAdapter<VoiceMicBean.DataBean
                         ivNumber2.setImageResource(ImageShowUtils.getInstans().getNumberResId(randomNumbers.get(1)));
                         ivNumber3.setImageResource(ImageShowUtils.getInstans().getNumberResId(randomNumbers.get(2)));
                         llRotate.setVisibility(View.VISIBLE);
+
 
                         ivNumber1.setAnimation(rotateAnimation);
                         ivNumber2.setAnimation(rotateAnimation);
@@ -252,6 +264,7 @@ public class PlaceRecyclerAdapter extends BaseQuickAdapter<VoiceMicBean.DataBean
                     }
 
                 } else if (emojiCode >= 128564) { //gif表情
+
                     iv_img_place.setVisibility(View.VISIBLE);
                     ImageUtils.loadDrawable(iv_img_place, ImageShowUtils.getInstans().getResId(emojiCode, 0));
                 } else if (emojiCode >= 128552) {
@@ -307,6 +320,7 @@ public class PlaceRecyclerAdapter extends BaseQuickAdapter<VoiceMicBean.DataBean
                         iv_img_place.setImageResource(ImageShowUtils.getInstans().getResId(emojiCode, item.getUserModel().getNumberShow()));
                     }
                 } else {
+
                     tv_img_place.setVisibility(View.VISIBLE);
                     tv_img_place.setText(new String(Character.toChars(item.getUserModel().getShowImg())));
                 }
@@ -328,16 +342,20 @@ public class PlaceRecyclerAdapter extends BaseQuickAdapter<VoiceMicBean.DataBean
 //                };
 //                timer.schedule(timerTask, 3000);
             } else {
+                ivNumber1.clearAnimation();
+                ivNumber2.clearAnimation();
+                ivNumber3.clearAnimation();
+                llRotate.setVisibility(View.GONE);
+
                 item.getUserModel().setImgOver(true);
                 item.getUserModel().setShowImg(0);
                 tv_img_place.setVisibility(View.INVISIBLE);
                 iv_img_place.setVisibility(View.INVISIBLE);
                 mSVGAImageView_place.setVisibility(View.INVISIBLE);
             }
-
         }
-
     }
+
 
 
 
