@@ -92,11 +92,12 @@ public class HttpManager {
         builder.addInterceptor(new Interceptor() {
             @Override
             public okhttp3.Response intercept(Chain chain) throws IOException {
-                Request request = chain.request();
+                String apptokenid = (String) SharedPreferenceUtils.get(MyApplication.getInstance(), Const.User.APP_TOKEN, "");
+                Request.Builder request = chain.request().newBuilder();
+                request.addHeader("apptokenid",apptokenid);
                 LogUtils.i("zzz", "request====1" + action);
-                LogUtils.i("zzz", "request====2" + request.headers().toString());
                 LogUtils.i("zzz接口信息", "request====3" + request.toString());
-                okhttp3.Response proceed = chain.proceed(request);
+                okhttp3.Response proceed = chain.proceed(request.build());
                 LogUtils.i("zzz", "proceed====4" + proceed.headers().toString());
                 return proceed;
             }
